@@ -51,11 +51,14 @@ h1{
     justify-content: center;
     width: 100%;
     height: auto;
+    z-index: 100;
 }
 .ip_whatamiimg{
     display: flex;
     width: 100%;
     height: auto;
+    animation: entrance 1s ease-in forwards;
+    z-index: 10;
 }
 .ip_whatamiimg:nth-child(1){
     justify-content: flex-start;
@@ -164,6 +167,10 @@ h1{
 .smtwt::after{
     width: 77px;
     margin-left: 140px;
+}
+.smgthb::after{
+    width: 77px;
+    margin-left: 235px;
 }
 .aboutpart, .skillandexp, .contactpart{
     display: flex;
@@ -553,7 +560,7 @@ textarea:valid~label{
 }
 #contactsocialmedia {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     align-items: center;
 }
@@ -587,6 +594,7 @@ textarea:valid~label{
     transition: all 0.1s;
     line-height: 2.2;
     margin-left: 5px;
+    margin-top: 7px;
 }
 .contactemail a {
     display: flex;
@@ -759,6 +767,10 @@ textarea:valid~label{
         margin-left: 70px;
         width: 40px;
     }
+    .smgthb::after{
+        margin-left: 117px;
+        width: 40px;
+    }
     #bsdperu::after{
         height: 100px;
         animation: linestretchmob 2s infinite;
@@ -919,7 +931,7 @@ textarea:valid~label{
         width: 150px;
         height: 150px;
         left: 85%;
-        top: 2250px;
+        top: 2150px;
     }
     .contactpart{
         margin-bottom: 100px;
@@ -976,4 +988,21 @@ textarea:valid~label{
     0%{height: 0%;}
     50%{height: 250px;}
     100%{height: 0%;}
+}
+@keyframes entrance {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lanameblob {
+    animation: entrance 1.2s ease-out forwards;
+}
+.mblobani{
+    animation: entrance 0.7s ease-out forwards;
 }

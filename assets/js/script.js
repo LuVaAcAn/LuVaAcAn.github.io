@@ -2,6 +2,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileMenu = document.querySelector('.mobile-menu');
     const navList = document.querySelector('.nav_list ul');
 
+    window.addEventListener('scroll', function() {
+        // Get the distance scrolled from the top of the page
+        var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        
+        // Calculate the amount to move the circles container
+        var moveAmount = scrollTop * 0.3; // Adjust the multiplier to control the speed of movement
+        
+        // Apply the transform with smooth transition to the circles container
+        document.querySelector('.circles-container').style.transition = 'transform 0.3s ease-in-out'; // Adjust the transition duration and timing function as needed
+        document.querySelector('.circles-container').style.transform = 'translateY(' + moveAmount + 'px)';
+    });
+    
     mobileMenu.addEventListener('click', toggleNavList);
 
     function toggleNavList() {
