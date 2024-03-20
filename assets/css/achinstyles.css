@@ -13,7 +13,8 @@ body {
     font-weight: 500;
     color: #000;
     background-color: #FFFCF0;
-    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 #wrapper{
     width: 100%;
@@ -980,11 +981,11 @@ textarea:valid~label{
         font-size: 20px;
     }
     #phrasep2{
-        font-size: 11px;
+        font-size: 10px;
     }
     .wordcol:hover {
         color: #007bff;
-        font-size: 14px;
+        font-size: 12px;
     }
     #lamain{
         width: 58%;
