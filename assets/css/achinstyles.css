@@ -13,6 +13,7 @@ body {
     color: #000;
     background-color: #FFFCF0;
     width: 100%;
+    cursor: default;
 }
 #wrapper {
     width: 100%;
