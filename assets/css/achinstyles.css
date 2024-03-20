@@ -880,6 +880,9 @@ textarea:valid~label{
 
 
 @media screen and (max-width: 768px) {
+    html, body{
+        overflow: visible;
+    }
     h1{
         font-size: 25px;
     }
