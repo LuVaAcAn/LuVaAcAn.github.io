@@ -5,12 +5,19 @@
     text-decoration: none;
     list-style: none;
 }
+html{
+    overflow-x: hidden;
+}
 body {
     font-family: 'Dela Gothic One', 'Chathura', sans-serif;
     font-weight: 500;
     color: #000;
     background-color: #FFFCF0;
     overflow-x: hidden;
+}
+#wrapper{
+    width: 100%;
+    height: 100%;
 }
 h1{
     font-size: 50px;
@@ -57,7 +64,6 @@ h1{
     display: flex;
     width: 100%;
     height: auto;
-    animation: entrance 1s ease-in forwards;
     z-index: 10;
 }
 .ip_whatamiimg:nth-child(1){
@@ -82,7 +88,6 @@ h1{
     justify-content: center;
     align-items: center;
     height: 40vh;
-    z-index: 0;
 }
 .mblobani {
     display: flex;
@@ -104,18 +109,30 @@ h1{
     justify-content: center;
     align-items: center;
     width: 100%;
+    z-index: 992;
 }
-.laperdial_txt{
-    display: inline-block;
+.laperdiar h1{
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.5;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 700px;
 }
-.laper_typewrite{
-    border-right: 1px solid;
-    width: 100%;
-    white-space: nowrap;
+.laperdiar{
+    margin-top: 180px;
+    font-size: 55px;
+}
+.messagelaper{
+    background-color: #F5BC1A;
+    display: block;
     overflow: hidden;
-    animation:
-        typing 5s steps(15, end) infinite,
-        cursor .4s step-end infinite alternate;
+    position: absolute;
+    padding-left: 1rem;
+    left: 280px;
+    animation: openclose 5s ease-in-out infinite;
 }
 .bsdsocialmedia{
     display: flex;
@@ -128,13 +145,14 @@ h1{
 #bsdperu{
     margin: 65px 0px 0px 20px; 
 }
-#bsdperu::after{
+#bsdperuline {
     position: absolute;
     content: ' ';
     background-color: #000;
     width: 1px;
-    height: 250px;
-    animation: linestretch 4s infinite;
+    height: 0;
+    transform: translateX(0px) translateY(80px);
+    animation: linestretch 2s infinite;
 }
 .bsdsm{
     display: inherit;
@@ -172,7 +190,7 @@ h1{
     width: 77px;
     margin-left: 235px;
 }
-.aboutpart, .skillandexp, .contactpart{
+.aboutpart, .skillandexp, .contactpart, .phrasepart{
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -196,26 +214,79 @@ h1{
     font-weight: 500;
     line-height: 0.6;
 }
-.birdiblytitles::after {
+span.wordcol1{
+    transition: all 0.25s ease;
+}
+span.wordcol1:hover{
+    color: #F5BC1A;
+    font-size: 53px;
+}
+.phrasepart{
+    margin-top: 20px;
+}
+#phraseyellow{
+    background-color: #F5BC1A;
+    width: 90%;
+    height: 80px;
+}
+#phrasewrap {
+    display: flex;
+    background-color: #F5BC1A;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    width: 90%;
+    height: 650px;
+    justify-content: center;
+}
+#phrasephrase {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+}
+#phrasephrase{
+    margin-top: -180px;
+}
+#phrasep1{
+    font-size: 60px;
+}
+#phrasep2{
+    margin-top: 10px;
+    color: #0F0F0F;
+    transition: transform 0.5s;
+}
+.wordcol{
+    color: #F5F5F5;
+    transition: all 0.25s;
+}
+.wordcol:hover{
+    color: #007bff;
+    font-size: 35px;
+}
+#birdiblytitlesline {
     position: absolute;
     content: ' ';
     background-color: #000;
     width: 1px;
-    height: 420px; 
-    margin-left: 45px;
+    height: 0px; 
+    margin-left: 7em;
     margin-top: 25px;
+    animation: linestretch1 3s infinite;
 }
 .birdiblytitles img{
     width: 80px;
     height: auto;
 }
-.bdbphrase::before {
+#bdbphraseline {
     position: absolute;
     content: ' ';
     background-color: #000;
     width: 1px;
     height: 180px;
-    transform: translateX(-140px) translateY(94px);
+    max-height: 180px;
+    transform: translateX(-210px) translateY(10px);
+    animation: linestretch 3s infinite;
+    overflow: hidden;
 }
 #abouttext {
     display: flex;
@@ -291,20 +362,18 @@ h1{
     width: 100%;
     justify-content: center;
 }
-#sandexp_skills::before{
+.lineskills{
     position: absolute;
     content: ' ';
     background-color: #000;
     width: 50%;
     height: 1px;
+    display: flex;
+}
+.l1{
     transform: translateX(50%) translateY(-30px);
 }
-#sandexp_skills::after{
-    position: absolute;
-    content: ' ';
-    background-color: #000;
-    width: 50%;
-    height: 1px;
+.l2{
     transform: translateX(-50%) translateY(215px);
 }
 #sandexp_exp{
@@ -397,15 +466,33 @@ h1{
     border: 3px solid #f5f5f5;
     box-shadow: 0 0 0px 4px #F5BC1A;
     align-content: center;
+    align-items: center;
     justify-content: center;
+    flex-flow: column wrap;
     transition: all 0.3s;
 }
+.skillselem span {
+    display: none;
+    transition: all 0.3s ease-in;
+    position: absolute;
+    bottom: 82px;
+    opacity: 0;
+    background-color: #F5F5F5;
+    border: 1px solid #F5BC1A;
+    box-shadow: 0 0 0px 1px  #F5BC1A;
+    border-radius: 10px;
+    padding: 2px 10px 2px 10px;
+}
 .skillselem:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     background-color: #F5F5F5;
     border: 3px solid #F5BC1A;
     box-shadow: 0 0 0px 4px #F5F5F5;
     border-radius: 10%;
+}
+.skillselem:hover span {
+    display: flex;
+    opacity: 1;
 }
 .skillselem img {
     width: 60px;
@@ -600,14 +687,14 @@ textarea:valid~label{
     display: flex;
     flex-direction: row;
 }
-.circles-container {
+.circles-container, .lines-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: -2;
+    z-index: -10;
 }
 .circlesback {
     position: absolute;
@@ -620,20 +707,88 @@ textarea:valid~label{
     animation: pulse 5s ease-in-out infinite alternate;
 }
 #scrollToTopBtn {
-    display: none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10%;
+    right: 3%;
     z-index: 99;
     background-color: #edaf32;
     color: white;
+    width: 30px;
+    height: 30px;
     border: none;
     border-radius: 50%;
-    font-size: 40px;
+    font-size: 30px;
     cursor: pointer;
     padding: 30px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
-
+#cv-download {
+    position: fixed;
+    bottom: 20%;
+    left: 3%;
+    z-index: 99;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    position: fixed;
+    box-sizing: border-box;
+    transition: opacity .25s ease-out;
+    transition: bottom 0.3s ease;
+}
+#cv-download::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/assets/images/CV1.png) no-repeat center;
+    background-size: cover;
+    filter: invert(1);
+    z-index: -3;
+    animation: 8s linear infinite infrotate;
+    cursor:default;
+}
+#cv-download a {
+    background: #F5BC1A;
+    border: 1px solid #F5BC1A;
+    border-radius: 100%;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: all 0.5s;
+}
+#cv-download a:hover {
+    background: #edaf32;
+    border: 1px solid #edaf32;
+    font-size: 33px;
+}
+#cv-download a{
+    width: 105px;
+    height: 105px;
+    line-height: 105px;
+}
+.birdiblypng{
+    transition: all 0.2s;
+}
+.birdiblypng:hover{
+    transform: scale(1.2);
+}
+.birdiblypng1{
+    transition: all 0.2s;
+}
+.birdiblypng1:hover{
+    transform: translateX(-48px) translateY(48px) scale(1.2);
+}
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -643,6 +798,14 @@ textarea:valid~label{
     }
     100% {
         transform: scale(1);
+    }
+}
+@keyframes infrotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
     }
 }
 .c1{
@@ -667,8 +830,54 @@ textarea:valid~label{
     width: 700px;
     height: 700px;
     left: 80%;
-    top: 2800px;
+    top: 3400px;
 }
+
+.lanameblob {
+    animation: entrancebomb 1.2s ease;
+}
+.mblobani {
+    animation: bounce 2s ease, chungus .65s ease;
+}
+
+.hidden, .hidden1{
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1s;
+}
+.hidden{
+    transform: translateX(-10%);
+}
+.hidden1{
+    transform: translateX(10%);
+}
+.hiddenleft, .hiddenright{
+    opacity: 0;
+    transition: all 0.7s;
+}
+.hiddenleft{
+    transform: translateX(100%) translateY(-30px);
+}
+.hiddenright{
+    transform: translateX(-100%) translateY(215px);
+}
+.showleft, .showright{
+    opacity: 1;
+}
+.showleft{
+    transform: translateX(50%) translateY(-30px);
+}
+.showright{
+    transform: translateX(-50%) translateY(215px);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+
 @media screen and (max-width: 768px) {
     h1{
         font-size: 25px;
@@ -730,6 +939,52 @@ textarea:valid~label{
     .mblobani{
         height: 550px;
         width: 550px;
+        animation: bouncemob 2s ease;
+    }
+    .laperdiar{
+        margin-top: -10px;
+    }
+    .laperdiar h1 {
+        display: flex;
+        font-weight: 100;
+        line-height: 1.5;
+        width: 295px;
+        font-size: 20px;
+        justify-items: center;
+        align-items: center;
+    }
+    .messagelaper {
+        background-color: #F5BC1A;
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        padding-left: 0.5rem;
+        left: 120px;
+        animation: openclosemob 4s ease-in-out infinite;
+    }
+    #phraseyellow {
+        height: 30px;
+    }
+    #phrasewrap {
+        display: flex;
+        background-color: #F5BC1A;
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+        width: 90%;
+        height: 200px;
+        justify-content: center;
+    }
+    #phrasephrase {
+        margin-top: -80px;
+    }
+    #phrasep1{
+        font-size: 20px;
+    }
+    #phrasep2{
+        font-size: 11px;
+    }
+    .wordcol:hover {
+        color: #007bff;
+        font-size: 14px;
     }
     #lamain{
         width: 58%;
@@ -787,10 +1042,19 @@ textarea:valid~label{
         width: 100%;
     }
     .abttitles {
-        margin: 60px 0px 0px 40px;
+        margin: 20px 0px 0px 40px;
+    }
+    .wordcol1{
+        font-size: 40px;
+        line-height: 1;
+    }
+    span.wordcol1:hover{
+        font-size: 45px;
+        color: #F5BC1A;
     }
     .abttitles p{
-        font-size: 25px;
+        font-size: 34px;
+        margin-top: 3px;
     }
     #abouttext{
         width: 88%;
@@ -863,24 +1127,18 @@ textarea:valid~label{
         width: 45px;
         height: auto;
     }
-    .bdbphrase::before {
-        position: absolute;
-        content: ' ';
-        background-color: #000;
-        width: 1px;
-        height: 80px;
-        transform: translateX(-85px) translateY(50px);
+    #bdbphraseline {
+        max-height: 80px;
+        transform: translateX(-85px) translateY(30px);
     }
     .skillselem img {
         width: 40px;
         height: auto;
     }
-    #sandexp_skills::after{
-        position: absolute;
-        content: ' ';
-        background-color: #000;
-        width: 50%;
-        height: 1px;
+    .hiddenright{
+        transform: translateX(-100%) translateY(175px);
+    }
+    .showright{
         transform: translateX(-50%) translateY(175px);
     }
     #sandpphoto img{
@@ -888,7 +1146,13 @@ textarea:valid~label{
         height: auto;
     }
     .skillandexp{
-        margin-top: 50px;
+        margin-top: 35px;
+    }
+    .skillselem span {
+        bottom: 65px;
+        font-size: 15px;
+        border-radius: 10px;
+        padding: 2px 10px 2px 10px;
     }
     .exp_container {
         padding: 15px 0px;
@@ -908,6 +1172,8 @@ textarea:valid~label{
     .circlesback {
         -ms-filter: blur(20px);
         filter: blur(20px);
+        z-index: -2;
+
     }
     .c1{
         width: 160px;
@@ -931,7 +1197,7 @@ textarea:valid~label{
         width: 150px;
         height: 150px;
         left: 85%;
-        top: 2150px;
+        top: 2350px;
     }
     .contactpart{
         margin-bottom: 100px;
@@ -945,8 +1211,40 @@ textarea:valid~label{
         width: 80%;
     }
     #scrollToTopBtn {
+        bottom: 5%;
+        right: 5%;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        font-size: 25px;
+        padding: 25px;
+    }
+    #cv-download {
+        bottom: 3%;
+        left: 3%;
+        border-radius: 50%;
         font-size: 20px;
-        padding: 18px;
+        cursor: pointer;
+        padding: 10px;
+        position: fixed;
+        opacity: 0;
+        box-sizing: border-box;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    #cv-download a {
+        border: 1px solid #F5BC1A;
+        border-radius: 100%;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        transition: all 0.5s;
+    }
+    #cv-download a {
+        width: 65px;
+        height: 65px;
+        line-height: 60px;
     }
 }
 /* Estilos para versiones de escritorio */
@@ -961,10 +1259,6 @@ textarea:valid~label{
     #mainblob{
         width: 100vh;
         height: auto;
-    }
-    .laper_typewrite{
-        margin-top: 180px;
-        font-size: 60px;
     }
     .aboutpart{
         align-items: center;
@@ -989,20 +1283,170 @@ textarea:valid~label{
     50%{height: 250px;}
     100%{height: 0%;}
 }
+@keyframes linestretch1 {
+    0%{height: 0%;}
+    50%{height: 420px;}
+    100%{height: 0%;}
+}
+@keyframes chungus {
+    0%{transform: scale(100);}
+    100%{transform: scale(1);}
+}
+@keyframes bounce {
+    0% {transform: scale(1) translateY(0)}
+    10% {transform: scale(1.2,.9);}
+    30% {transform: scale(.8,1.1) translateY(-50px)}
+    50% {transform: scale(1.2,.9);}
+    70% {transform: scale(1) translateY(0);}
+    100% {transform: translateY(0);}
+}
+@keyframes bouncemob {
+    0% {transform: scale(1.15,1);}
+    10% {transform: scale(1.2,1.05);}
+    30% {transform: scale(.8,1.1)}
+    50% {transform: scale(1.2,1.05);}
+    70% {transform: scale(1);}
+    100% {transform: translateY(0);}
+}
+@keyframes entrancebomb {
+    0%{transform: scale(20%);}
+    30%{transform: scale(1.1);}
+    50%{transform: scale(1);}
+    70%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
 @keyframes entrance {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(-50px);
     }
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-.lanameblob {
-    animation: entrance 1.2s ease-out forwards;
+@keyframes openclose {
+    0% {
+      top: 0.2rem;
+      width: 0;
+    }
+    5% {
+      width: 0;
+    }
+    15% {
+      width: 430px;
+    }
+    30% {
+      top: 0.2rem;
+      width: 430px;
+    }
+    33% {
+      top: 0.2rem;
+      width: 0;
+    }
+    35% {
+      top: 0.2rem;
+      width: 0;
+    }
+    38% {
+      top: -4.5rem;
+    }
+    48% {
+      top: -4.5rem;
+      width: 585px;
+    }
+    62% {
+      top: -4.5rem;
+      width: 585px;
+    }
+    66% {
+      top: -4.5rem;
+      width: 0;
+      text-indent: 0;
+    }
+    71% {
+      top: -9rem;
+      width: 0;
+      text-indent: 5px;
+    }
+    86% {
+      top: -9rem;
+      width: 585px;
+    }
+    95% {
+      top: -9rem;
+      width: 585px;
+    }
+    98% {
+      top: -9rem;
+      width: 0;
+      text-indent: 5px;
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
+  }
+@keyframes openclosemob {
+    0% {
+      top: 0.1rem;
+      width: 0;
+    }
+    5% {
+      width: 0;
+    }
+    15% {
+      width: 200px;
+    }
+    30% {
+        top: 0.1rem;
+        width: 200px;
+    }
+    33% {
+      top: 0.1rem;
+      width: 0;
+    }
+    35% {
+      top: 0.1rem;
+      width: 0;
+    }
+    38% {
+      top: -1.85rem;
+    }
+    48% {
+      top: -1.85rem;
+      width: 200px;
+    }
+    62% {
+      top: -1.85rem;
+      width: 200px;
+    }
+    66% {
+      top: -1.85rem;
+      width: 0;
+      text-indent: 0;
+    }
+    71% {
+      top: -3.7rem;
+      width: 0;
+    }
+    86% {
+        top: -3.7rem;
+        width: 200px;
+    }
+    95% {
+      top: -3.7rem;
+      width: 200px;
+    }
+    98% {
+      top: -3.7rem;
+      width: 0;
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
 }
-.mblobani{
-    animation: entrance 0.7s ease-out forwards;
-}
+  

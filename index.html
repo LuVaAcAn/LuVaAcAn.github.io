@@ -35,16 +35,16 @@
             </nav>
         </header>
         <div class="cntwrp">
-            <div class="initialpart">
+            <div class="initialpart one">
                 <div class="ip_whatami">
                     <div class="ip_whatamiimg">
-                        <img id="wbdev" src="/assets/images/wbdev.png">
+                        <img id="wbdev" class="hidden" src="/assets/images/wbdev.png">
                     </div>
                     <div class="ip_whatamiimg">
-                        <img id="grapdes" src="/assets/images/grapdes.png">
+                        <img id="grapdes" class="hidden1" src="/assets/images/grapdes.png">
                     </div>
                 </div>
-                <div class="s_blob">
+                <div id="s_blob" class="s_blob">
                     <div class="lanameblob">
                         <img id="lamain" src="assets/images/lamain.png">
                     </div>
@@ -66,34 +66,51 @@
                     </div>
                 </div>
                 <div class="laperdiar">
-                    <div class="laperdial_txt">
-                        <p class="laper_typewrite">Digital Artist</p>
-                    </div>
+                    <h1>
+                        <span>DIGITAL</span>
+                        <div class="messagelaper">
+                            <div id="mesw1">ARTIST</div>
+                            <div id="mesw1">CREATOR</div>
+                            <div id="mesw1">DEVELOPER</div>
+                        </div>
+                    </h1>
                 </div>
                 <div class="bsdsocialmedia">
                     <div id="bsdperu">
+                        <span id="bsdperuline"></span>
                         <p>based on Peru</p>
                     </div>
                     <div id="inisocialmedia">
                         <a class="smig smsm" target="_blank" href="https://www.instagram.com/luva_acan/">instagram</a>
                         <a class="smtwt smsm" target="_blank" href="https://twitter.com/luva_acan">twitter</a>
-                        <a class="smgthb smsm" target="_blank" href="https://twitter.com/luva_acan">github</a>
+                        <a class="smgthb smsm" target="_blank" href="https://github.com/LuVaAcAn/">github</a>
                     </div>
                 </div>
             </div>
-            <div class="aboutpart">
+            <div class="phrasepart">
+                <div id="phraseyellow"></div>
+                <div id="phrasewrap">
+                    <div id="phrasephrase">
+                        <p id="phrasep1">EXPERIENCIAS MÁS<br>ALLÁ DE LA PANTALLA</p>
+                        <p id="phrasep2">Porque en un mundo saturado de <span class="wordcol">información</span>,<br>la <span class="wordcol">autenticidad</span> y la <span class="wordcol">creatividad</span><br>se convierten en la <span class="wordcol">clave</span>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutpart two">
                 <div id="aboutitles">
                     <div class="abttitles">
-                        <h1>ABOUT</h1>
-                        <p>Acerca de Luciano Achin (Lima, Peru)<br>Actual estudiante de Computer Science.</p>
+                        <h1>¡ Hola !<span>&nbsp;&nbsp;&nbsp;</span>Soy <span class="wordcol1">Luciano</span>.</h1>
+                        <p>(Tambien LuVa)</p>
                     </div>  
                     <div class="birdiblytitles">
-                        <img src="/assets/images/Birdibly.png">
+                        <span id="birdiblytitlesline"></span>
+                        <img class="birdiblypng" src="/assets/images/Birdibly.png">
                     </div>
                 </div>
                 <div id="abouttext">
                     <div class="abttext">
-                        <p>
+                        <p class="hidden">
+                            Actual estudiante de Computer Science.<br>
                             Autodidacta en el desarrollo web y de aplicaciones móviles,
                             con experiencia en diseñar nuevas funciones desde la concepción hasta la producción,
                             implementando wireframe y flujos de diseño en aplicaciones de software de alto rendimiento.<br><br>
@@ -113,14 +130,15 @@
                 </div>
                 <div id="aboutphrase">
                     <div class="abttitles" id="abtpharse">
-                        <p>Experiencias mas alla de la pantalla. Porque en un mundo saturado de informacion, la autenticidad y la creatividad se convierten en la clave.</p>
+                        <p class="hidden">El diseno se expande mas alla de la pantalla, donde la autenticidad y la creatividad se entrelazan en la trama de la experiencia visual.</p>
                     </div>
                     <div class="bdbphrase">
-                        <img src="/assets/images/Birdibly.png">
+                        <span id="bdbphraseline"></span>
+                        <img class="birdiblypng1" src="/assets/images/Birdibly.png">
                     </div>
                 </div>
             </div>
-            <div class="skillandexp">
+            <div class="skillandexp three">
                 <div class="sandpabove">
                     <div id="sandptitle">
                         <h1>SKILLS & EXPERIENCE</h1>
@@ -128,15 +146,17 @@
                     <div id="sandpphoto"><img src="/assets/images/s0qsf891tun6fqckm20230808195750.png"></div>
                 </div>
                 <div id="sandexp_skills">
+                    <span class="lineskills linehorizontal l1 hiddenleft"></span>
+                    <span class="lineskills linehorizontal l2 hiddenright"></span>
                     <div class="skillsgrid">
-                        <div class="skillselem"><img src="/assets/images/webskills/html.png"></div>
-                        <div class="skillselem"><img src="/assets/images/webskills/css.png"></div>
-                        <div class="skillselem"><img src="/assets/images/webskills/js.png"></div>
-                        <div class="skillselem"><img src="/assets/images/webskills/react.png"></div>
-                        <div class="skillselem"><img src="/assets/images/webskills/redux.png"></div>
-                        <div class="skillselem"><img src="/assets/images/webskills/tailwind.png"></div>
-                        <div class="skillselem"><img src="/assets/images/webskills/firebase.png"></div>
-                        <div class="skillselem"><img src="/assets/images/webskills/git.png"></div>
+                        <div class="skillselem"><img src="/assets/images/webskills/html.png"><span class="skillelemtxt">HTML</span></div>
+                        <div class="skillselem"><img src="/assets/images/webskills/css.png"><span class="skillelemtxt">CSS</span></div>
+                        <div class="skillselem"><img src="/assets/images/webskills/js.png"><span class="skillelemtxt">JS</span></div>
+                        <div class="skillselem"><img src="/assets/images/webskills/react.png"><span class="skillelemtxt">REACT</span></div>
+                        <div class="skillselem"><img src="/assets/images/webskills/redux.png"><span class="skillelemtxt">REDUX</span></div>
+                        <div class="skillselem"><img src="/assets/images/webskills/tailwind.png"><span class="skillelemtxt">TAILWIND</span></div>
+                        <div class="skillselem"><img src="/assets/images/webskills/firebase.png"><span class="skillelemtxt">FIREBASE</span></div>
+                        <div class="skillselem"><img src="/assets/images/webskills/git.png"><span class="skillelemtxt">GIT</span></div>
                     </div>
                 </div>
                 <div id="sandexp_exp">
@@ -150,7 +170,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contactpart">
+            <div class="contactpart four">
                 <div class="contactpabove">
                     <div id="contactptitle">
                         <h1>CONTACT</h1>
@@ -205,17 +225,19 @@
                 </div>
             </div>-->
             <div class="blankspace"></div>
-            <div class="circles-container">
-                <span class="circlesback c1 cmove"></span>
-                <span class="circlesback c2 cmove"></span>
-                <span class="circlesback c3 cmove"></span>
-            </div>
-            <span class="circlesback c4"></span>
-
         </div>
         <footer></footer>
+        <div class="circles-container">
+            <span class="circlesback c1 cmove"></span>
+            <span class="circlesback c2 cmove"></span>
+            <span class="circlesback c3 cmove"></span>
+        </div>
+        <span class="circlesback c4"></span>
+        </div>
         <a href="#header_wrap"><button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-angle-up"></i></button></a>
-
+        <div id="cv-download">
+            <a href="https://drive.google.com/file/d/1rQDeOnIqRgL6h-flMRjiGYDICAoxSP0s/view?usp=sharing" target="_blank">CV</a>
+        </div>
     </div>
     <script src="/assets/js/script.js"></script>
 </body>

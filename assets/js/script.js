@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
+    document.body.style.overflowX = 'hidden';
+
+    function disableScroll() {
+        const SBLOB = document.getElementById('s_blob');
+        if (SBLOB) {
+            SBLOB.style.zIndex = '991';
+        }
+        if (window.innerWidth < 768 && SBLOB) {
+            SBLOB.style.zIndex = '';
+        }
+    }
+    function enableScroll() {
+        document.body.style.overflow = '';
+        const SBLOB = document.getElementById('s_blob');
+        if (SBLOB) {
+            SBLOB.style.zIndex = '';
+        }
+    }
+    disableScroll();
+    setTimeout(enableScroll, 700);
+
     const mobileMenu = document.querySelector('.mobile-menu');
     const navList = document.querySelector('.nav_list ul');
 
@@ -85,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
     applyTransformations();
     window.addEventListener('resize', applyTransformations);
 
-    // Smooth scrolling function
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -97,14 +117,74 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    var cvDownloadBtn = document.getElementById("cv-download");
 
-    // When the user scrolls down 30px from the top of the document, show the button
     window.onscroll = function() {
         scrollFunction();
     };
 
     function scrollFunction() {
-        scrollToTopBtn.style.display = (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) ? "block" : "none";
+        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+            scrollToTopBtn.style.opacity = 1;
+            scrollToTopBtn.style.display = "flex"; 
+        } else {
+            scrollToTopBtn.style.opacity = 0;
+            setTimeout(function() {
+                scrollToTopBtn.style.display = "none";
+            }, 300);
+        }
+        if(window.innerWidth > 769){
+            cvDownloadBtn.style.opacity = 1;
+            cvDownloadBtn.style.bottom = (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) ? "10%" : "20%";
+        }
+        if(window.innerWidth < 768){
+            if(document.body.scrollTop > 30 || document.documentElement.scrollTop > 30){
+                cvDownloadBtn.style.opacity = 1;
+            } else {
+                cvDownloadBtn.style.opacity = 0;
+            }
+        }
     }
 
+    /*Animacion de entradas*/
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry)=>{
+            console.log(entry)
+            if(entry.isIntersecting){
+                entry.target.classList.add('show');
+            }else{
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+    const hiddenElements = document.querySelectorAll('.hidden');
+    const hiddenElements1 = document.querySelectorAll('.hidden1');
+    hiddenElements.forEach((el) => observer.observe(el));
+    hiddenElements1.forEach((el) => observer.observe(el));
+
+    const observerright = new IntersectionObserver((entries) => {
+        entries.forEach((entry)=>{
+            console.log(entry)
+            if(entry.isIntersecting){
+                entry.target.classList.add('showright');
+            }else{
+                entry.target.classList.remove('showright');
+            }
+        });
+    });
+    const hiddenElementsright = document.querySelectorAll('.hiddenright');
+    hiddenElementsright.forEach((el) => observerright.observe(el));
+
+    const observerleft = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.isIntersecting) {
+                entry.target.classList.add('showleft');
+            } else {
+                entry.target.classList.remove('showleft');
+            }
+        });
+    });
+    const hiddenElementsleft = document.querySelectorAll('.hiddenleft');
+    hiddenElementsleft.forEach((el) => observerleft.observe(el));
 });
