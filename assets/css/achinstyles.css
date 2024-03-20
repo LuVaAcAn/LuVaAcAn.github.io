@@ -6,7 +6,6 @@
     list-style: none;
 }
 html{
-    overflow-x: hidden;
 }
 body {
     font-family: 'Dela Gothic One', 'Chathura', sans-serif;
@@ -14,11 +13,11 @@ body {
     color: #000;
     background-color: #FFFCF0;
     width: 100%;
-    max-width: 100vw;
 }
-#wrapper{
+#wrapper {
     width: 100%;
-    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 h1{
     font-size: 50px;
@@ -880,9 +879,6 @@ textarea:valid~label{
 
 
 @media screen and (max-width: 768px) {
-    html, body{
-        overflow: visible;
-    }
     h1{
         font-size: 25px;
     }
@@ -1177,7 +1173,6 @@ textarea:valid~label{
         -ms-filter: blur(20px);
         filter: blur(20px);
         z-index: -2;
-
     }
     .c1{
         width: 160px;
@@ -1205,6 +1200,8 @@ textarea:valid~label{
     }
     .contactpart{
         margin-bottom: 100px;
+    }
+    .circles-container{
     }
     @keyframes linestretchmob {
         0%{height: 0%;}

@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', function() {
         // Get the distance scrolled from the top of the page
-        var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        var scrollTop = window.scrollY || (document.documentElement || document.body.parentNode || document.body).scrollTop;
         
         // Calculate the amount to move the circles container
         var moveAmount = scrollTop * 0.3; // Adjust the multiplier to control the speed of movement
