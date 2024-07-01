@@ -2,13 +2,13 @@
 
 **`Web Developer/Creator/Digital Artist`**
 
-¡Bienvenido al repositorio de mi portafolio digital! ⭐
+Welcome to my digital portfolio repository! ⭐
 
-- 👨‍💻 Como estudiante de Ciencias de la Computación comprometido, me apasiona explorar y dominar el mundo del desarrollo web. Mi enfoque se centra en perfeccionar mis habilidades en HTML, CSS, JavaScript y otras tecnologías relevantes para crear experiencias web dinámicas y funcionales. Estoy constantemente buscando nuevos desafíos y oportunidades para crecer profesionalmente en este emocionante campo.
-- 🎨 Con un enfoque creativo y un ojo para el detalle, plasmo diseños en la realidad, fusionando funcionalidad con estética para crear experiencias visualmente impactantes y fáciles de usar.
+- 👨‍💻 As a committed Computer Science student, I am passionate about exploring and mastering the world of web development. My focus is on honing my skills in HTML, CSS, JavaScript and other relevant technologies to create dynamic and functional web experiences. I am constantly looking for new challenges and opportunities to grow professionally in this exciting field.
+- 🎨 With a creative approach and an eye for detail, I translate designs into reality, fusing functionality with aesthetics to create visually stunning and user-friendly experiences.
 
-### 💻 Lenguajes y Herramientas usadas:
+### 💻 Technologies:
 <img align="left" alt="Java" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" /> <img align="left" alt="Java" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" /> <img align="left" alt="Java" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" /><br/>
 
 
-## ¡Gracias por visitar mi portafolio!
+## Thanks for visiting my portfolio!
