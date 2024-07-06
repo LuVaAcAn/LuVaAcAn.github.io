@@ -61,10 +61,10 @@ h1 {
     color: var(--notblack);
     font-size: 17px;
 }
-.nav_list ul li a:hover {
+.nav_list ul li a:hover, a:focus {
     color: var(--yellow);
 }
-.nav_list ul li:hover {
+.nav_list ul li:hover, li:focus {
     cursor: pointer;
 }
 .ip_whatami, .ip_whatamiimg {
@@ -172,7 +172,7 @@ h1 {
 #inisocialmedia a {
     color: var(--notblack);
 }
-#inisocialmedia a:hover {
+#inisocialmedia a:hover, li:hover {
     color: var(--yellow)
 }
 .smsm::after {
@@ -184,7 +184,7 @@ h1 {
     content: ' ';
     background-color: var(--black);
 }
-.smsm:hover:after {
+.smsm:hover:after, .smsm:focus:after {
     background-color: var(--yellow);
 }
 .smig::after {
@@ -225,7 +225,7 @@ h1 {
 span.wordcol1{
     transition: all 0.25s ease;
 }
-span.wordcol1:hover{
+span.wordcol1:hover, span.wordcol1:focus{
     color: var(--yellow);
     font-size: 53px;
 }
@@ -267,7 +267,7 @@ span.wordcol1:hover{
     color: var(--white);
     transition: all 0.25s;
 }
-.wordcol:hover{
+.wordcol:hover, .wordcol:focus{
     color: #007bff;
     font-size: 35px;
 }
@@ -414,7 +414,7 @@ span.wordcol1:hover{
     border-radius: 20px;
     transition: all 0.5s;
 }
-.exp_container .exp_card:hover{
+.exp_container .exp_card:hover, .exp_container .exp_card:focus{
     height: 400px;
 }
 .exp_card__img{
@@ -435,7 +435,7 @@ span.wordcol1:hover{
     height: 100%;
     object-fit: cover;
 }
-.exp_container .exp_card:hover .exp_card__img{
+.exp_container .exp_card:hover .exp_card__img, .exp_container .exp_card:focus .exp_card__img{
     top: -100px;
     scale: 0.75;
 }
@@ -449,7 +449,7 @@ span.wordcol1:hover{
     text-align: left;
     transition: 0.5s;
 }
-.exp_card:hover{
+.exp_card:hover, .exp_card:focus{
     margin-top: 80px;
 }
 .exp_card__cont h2{
@@ -465,7 +465,7 @@ span.wordcol1:hover{
     text-decoration: none;
     border-radius: 8px;
 }
-.exp_container .exp_card:hover .exp_card__cont{
+.exp_container .exp_card:hover .exp_card__cont, .exp_container .exp_card:focus .exp_card__cont{
     top: 130px;
     height: 250px;
 }
@@ -499,14 +499,14 @@ span.wordcol1:hover{
     border-radius: 10px;
     padding: 2px 10px 2px 10px;
 }
-.skillselem:hover {
+.skillselem:hover, .skillselem:focus {
     transform: scale(1.1);
     background-color: var(--white);
     border: 3px solid var(--yellow);
     box-shadow: 0 0 0px 4px var(--white);
     border-radius: 10%;
 }
-.skillselem:hover span {
+.skillselem:hover span, .skillselem:focus span {
     display: flex;
     opacity: 1;
 }
@@ -514,7 +514,7 @@ span.wordcol1:hover{
     width: 60px;
     height: auto;
 }
-.skillselem:hover img{
+.skillselem:hover img, .skillselem:focus img{
     color: var(--yellow);
     filter: invert(90%) sepia(13%) saturate(7344%) hue-rotate(346deg) brightness(100%) contrast(93%);
 }
@@ -628,7 +628,7 @@ textarea:valid~label{
     margin-bottom: 30px;
     transition: all 0.2s;
 }
-#bdbabt4:hover{
+#bdbabt4:hover, #bdbabt4:focus{
     transform: translate(0px, 100px) scale(1.6);
 }
 #mpabt{
@@ -681,11 +681,11 @@ textarea:valid~label{
     border-radius: 10px;
     font-weight: 300;
 }
-.contactitem:hover{
+.contactitem:hover,.contactitem:focus{
     scale: 1.15;
     filter: invert(90%) sepia(13%) saturate(7344%) hue-rotate(346deg) brightness(100%) contrast(93%);
 }
-.contactitem p:hover{
+.contactitem p:hover, .contactitem p:focus{
     color: var(--yellow);
 }
 .contactemail{
@@ -786,7 +786,7 @@ textarea:valid~label{
     display: block;
     transition: all 0.5s;
 }
-#cv-download a:hover {
+#cv-download a:hover, #cv-download a:focus {
     background: var(--yellowhover);
     border: 1px solid var(--yellowhover);
     font-size: 33px;
@@ -799,13 +799,13 @@ textarea:valid~label{
 .birdiblypng{
     transition: all 0.2s;
 }
-.birdiblypng:hover{
+.birdiblypng:hover, .birdiblypng:focus{
     transform: scale(1.2);
 }
 .birdiblypng1{
     transition: all 0.2s;
 }
-.birdiblypng1:hover{
+.birdiblypng1:hover, .birdiblypng1:focus{
     transform: translateX(-48px) translateY(48px) scale(1.2);
 }
 @keyframes pulse {
@@ -999,7 +999,7 @@ textarea:valid~label{
     #phrasep2{
         font-size: 10px;
     }
-    .wordcol:hover {
+    .wordcol:hover, .wordcol:focus {
         color: #007bff;
         font-size: 12px;
     }
@@ -1065,7 +1065,7 @@ textarea:valid~label{
         font-size: 40px;
         line-height: 1;
     }
-    span.wordcol1:hover{
+    span.wordcol1:hover, span.wordcol1:focus{
         font-size: 45px;
         color: var(--yellow);
     }
